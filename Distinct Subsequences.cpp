@@ -15,7 +15,19 @@ Solution::Solution(){}
     int len_S = S.length();
     int len_T = T.length();
 
-    vector<vector<int> > dp(len_S+1, vector<int>(len_T+1, 0));
+   // vector<vector<int> > dp(len_S+1, vector<int>(len_T+1, 0));
+   int **dp = (int **)malloc(sizeof(int) * len_S+1);
+   for(int iter = 0; iter <= len_T; iter++)
+   {
+       dp[iter] = (int *)malloc(sizeof(int) * len_T+1);
+   }
+   for(int iter = 0; iter <= len_S; iter++)
+   {
+       for(int jter = 0; jter <= len_T; jter++)
+       {
+           dp[iter][jter] = 0;
+       }
+   }
     for(int iter = 0; iter <= len_S; iter++)
     {
         dp[iter][0] = 1;
