@@ -11,13 +11,6 @@ class MyException : public exception{
             return msg;
         }
 };
-
-int max(int x, int y){
-    return x > y ? x : y;
-}
-int min(int x, int y){
-    return x < y ? x : y;
-}
 class Solution
 {
     private:
@@ -43,7 +36,7 @@ void Solution::solve(int x, int y){
         return;
     }
     else if( y < 0){
-        cout << (max(x, y) - min(x, y)) << endl;
+        cout << x-y << endl;
         return;
     }
     else if(x < 0 && (y < abs(x)) ){
