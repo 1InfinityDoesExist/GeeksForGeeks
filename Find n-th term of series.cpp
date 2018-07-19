@@ -11,6 +11,15 @@ class Solution
 
 };
 Solution::Solution(){}
+//better to use the formula 
+//   
+//
+/*
+
+    n*(n+1)/2
+
+*/
+
 void Solution::calculate()
 {
     dp[0] = 1;
