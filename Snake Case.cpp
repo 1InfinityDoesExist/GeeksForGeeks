@@ -7,7 +7,7 @@ class Solution
     private:
     public:
         Solution();
-        void solve(string str);
+        void solve(string str);        
 };
 Solution::Solution(){}
 string ltrim(const string& str)
@@ -16,25 +16,21 @@ string ltrim(const string& str)
     return (start == string::npos) ? "":str.substr(start);
 }
 string rtrim(const string& str)
-{
+{   
     size_t end = str.find_last_not_of(SPACE);
     return (end == string::npos) ? "": str.substr(0, end+1);
-
+    
 }
 void Solution::solve(string strr)
 {
     string str = rtrim(ltrim(strr));
     queue<string> q;
     string s = "";
-    int jter = 0;
-    int iter;
-    while(str[jter] == ' ')
+    
+   
+    for(string::size_type iter = 0; iter < str.length(); iter++)
     {
-        jter++;
-    }
-    for( iter = jter; iter < str.length(); iter++)
-    {
-
+        
         if(str[iter] == ' ')
         {
             if(s.length() == 0)
@@ -67,7 +63,7 @@ void Solution::solve(string strr)
             q.pop();
             return;
         }
-
+        
         if(q.front() == "-1")
         {
             cout <<'_';
