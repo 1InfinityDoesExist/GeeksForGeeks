@@ -19,6 +19,9 @@ int main() {
 
 }
 }
+///java
+//return new java.math.BigInteger(num1).multiply(new java.math.BigInteger(num2)).toString();
+
 
 /*Please note that it's Function problem i.e.
 you need to write your solution in the form of Function(s) only.
